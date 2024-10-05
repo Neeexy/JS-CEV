@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Eventos DOM</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1998/1998592.png" type="image/x-icon">
+
+    <style>
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(223, 222, 222);
+            user-select: none;
+        }
+        body{
+            background-color: rgb(75, 75, 75);
+            font: normal 20px Arial;
+        }
+        h1{
+            color: rgb(14, 189, 189);
+        }
+        div#area{
+            border-radius: 20px;
+            background-color: blue;
+            color: white;
+            width: 300px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="area">
+        Interaja
+    </div>
+
+    <script>
+        var clicado = false
+        var a = document.getElementById('area'); // Define a variável desejada
+        a.addEventListener ('click', clica)
+        a.addEventListener ('mouseenter', entrar)
+        a.addEventListener ('mouseout', sair)
+        function clica(){
+
+            if (!clicado){
+                a.innerText = 'Clicou!'
+                a.style.background = 'red'
+                clicado = true
+            } //Após a ação, retorna a variável de controle como true, o que significa que o "botão" já foi clicado.
+
+            else{
+                a.innerText = 'Você já clicou, até mais...'
+                setTimeout(function(){
+                    location.reload()
+                },1000)  // 1s
+            }// Recarrega a página se o "botão" já tiver sido clicado (var clicado = true)
+        }
+
+        function entrar(){
+            a.innerText = 'Entrou ( LÁ ELE )'
+
+            setTimeout(function(){
+                    a.innerText = 'Interaja'
+                },1000)
+        }
+
+        function sair(){
+            a.innerText = 'Saiu ( LÁ ELE )'
+            setTimeout(function(){
+                a.innerText = 'Interaja'
+                a.style.background = 'red'
+            },3000)
+        }
+    </script>
+</body>
+
+</html>

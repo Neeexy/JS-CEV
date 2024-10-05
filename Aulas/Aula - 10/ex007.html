@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Somando números</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1998/1998592.png" type="image/x-icon">
+
+    <style>
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(223, 222, 222);
+            user-select: none;
+        }
+        body{
+            background-color: rgb(75, 75, 75);
+            font: normal 20px Arial;
+        }
+        h1{
+            color: #0ebdbd;
+        }
+        div#area{
+            border-radius: 20px;
+            background-color: blue;
+            color: white;
+            width: 300px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        .calc{
+            max-width: max-content ;
+        }
+        
+        .line{
+            margin-top: 3px;
+            margin-bottom: 3px;
+            height: 3px;
+            border-radius: 100px;
+            background-color: #0ebdbd;
+            box-shadow: black 3px 3px 3px;
+            width:101.3% ;
+        }
+        div#res::before{
+            content: 'Resultado: ';
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <section class="calc">
+        <input type="number" name="txtn1" id="txtn1"> +
+        <input type="number" name="txtn2" id="txtn2">
+        <input type="button" value="Somar" onclick="somar()">
+        <div class="line"></div>
+        <div id="res"></div>
+        <div class="line"></div>
+    </section>
+    <script>
+        function somar(){
+            var n1 = Number.parseFloat(document.getElementById('txtn1').value)
+            var n2 = Number.parseFloat(document.getElementById('txtn2').value)
+            if (isNaN(n1) || isNaN(n2)){
+                alert('Insira números válidos.')
+                location.reload()
+            }
+            var res = document.getElementById('res')
+            var s = n1 + n2
+
+            res.innerHTML = s
+
+            document.getElementById('txtn1').value =''
+            document.getElementById('txtn2').value =''
+        }
+    </script>
+</body>
+</html>
