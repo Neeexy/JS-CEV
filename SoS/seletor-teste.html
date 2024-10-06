@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Exemplo Seletor de Temporadas</title>
+    <style>
+    .temporada {
+      display: none; /* Esconde todas as temporadas inicialmente */
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+    </style>
+</head>
+<body>
+
+    <h1>Meu Anime</h1>
+<div class="temporada-selector">
+    <button data-temporada="1">Temporada 1</button>
+    <button data-temporada="2">Temporada 2</button>
+</div>
+
+<div class="temporada" id="temporada-1">
+    <h2>Temporada 1</h2>
+    <p>Episódio 1</p>
+    <p>Episódio 2</p>
+    <p>Episódio 3</p>
+</div>
+
+<div class="temporada" id="temporada-2">
+    <h2>Temporada 2</h2>
+    <p>Episódio 4</p>
+    <p>Episódio 5</p>
+    <p>Episódio 6</p>
+</div>
+
+<script src="seletor-teste.js"></script>    
+</body>
+</html>
