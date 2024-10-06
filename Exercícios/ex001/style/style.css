@@ -1,0 +1,49 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+}
+
+body{
+    background-color: #c4a684;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+section#cont{
+    max-width: 550px;
+    margin: auto;
+}
+#conteudo{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    max-width: 100%;
+    min-height: 320px;
+    box-shadow: rgba(0, 0, 0, 0.685) 4px 4px 7px;
+
+}
+
+p{
+    margin: 0px;
+    padding-top: 15px ;
+    padding-bottom: 15px ;
+    font-size: 24px;
+    text-align: center;
+}
+
+.ft { 
+    width: 240px;
+    height: 240px; 
+    overflow: hidden; /* Esconde as partes da imagem que excedem o círculo */
+    border-radius: 50%; /* Torna o contêiner circular */
+    margin: 0 auto; /* Centraliza o contêiner */
+}
+
+img#image {
+    width: 100%;
+    height: 100%;
+}

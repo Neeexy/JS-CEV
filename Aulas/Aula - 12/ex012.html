@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Relógio</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1998/1998592.png" type="image/x-icon">
+
+    <style>
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(223, 222, 222);
+            user-select: none;
+        }
+        body{
+            background-color: rgb(75, 75, 75);
+            font: normal 20px Arial;
+        }
+        h1{
+            color: #0ebdbd;
+        }
+        div#area{
+            border-radius: 20px;
+            background-color: blue;
+            color: white;
+            width: 300px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        .line{
+            margin-top: 3px;
+            margin-bottom: 3px;
+            height: 3px;
+            border-radius: 100px;
+            background-color: #0ebdbd;
+            box-shadow: black 3px 3px 3px;
+            width:101.3% ;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Relógio</h1>
+    <input  type="number" name="txtvel" id="h">
+    <input type="button" value="Verificar" id="verify"  >
+    <div id="res"></div>
+
+    <script src="ex012.js">
+        </script>
+</body>
+</html>
