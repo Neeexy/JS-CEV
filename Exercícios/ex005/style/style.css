@@ -54,3 +54,6 @@ button{
     max-height: 30px;
     font-style: italic;
 }
+input{
+    max-width: 40px;
+}
