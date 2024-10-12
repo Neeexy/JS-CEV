@@ -1,18 +1,20 @@
 function tabuada(){
-    let num = Number(document.querySelector('#num').value)
-    let tab = document.querySelector('#seltab')
+    let numero = Number(document.querySelector('#num').value)
+    let tabela = document.querySelector('#seltab')
 
-    if (num == 0){
-        alert('Por favor, digite um número!')
+    if(numero == 0){
+        alert('Por favor, insira um número!!')
+        location.reload()
     }
+    
 
-    let c = 0
-    tab.innerHTML = ''
+    let contador = 0
+    tabela.innerHTML = ''
 
-    while(c <=10){
+    while (contador <= 10){
         let item = document.createElement('option')
-        item.text = `${num} x ${c} = ${num*c}`
-        tab.appendChild(item)
-        c +=1
+        item.text = `${numero} x ${contador} = ${numero*contador}`
+        tabela.appendChild(item)
+        contador++
     }
 }
